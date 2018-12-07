@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import cesiumViewer from '@/components/cesiumViewer.vue';
 import login from '@/components/Login.vue';
 import home from '@/components/Home.vue';
+import chart from '@/components/charts.vue';
 
 Vue.use(VueRouter);
 
@@ -14,7 +15,7 @@ let routes = [
         hidden:true,
     },
     {
-        path: '/Home',
+        path: '/',
         name: '主页',
         component: home,        
         iconCls: 'el-icon-message',//图标样式class
@@ -38,12 +39,12 @@ let routes = [
     },
     {
         path: '/',
-        name: '导航三',
+        name: '',
         component: home,
-        iconCls: 'fa fa-address-card',
+        iconCls: 'fa fa-bar-chart',
         leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: cesiumViewer, name: '导航三' }
+            { path: '/Chart', component: chart, name: '图表' }
         ]
     },
 ];
