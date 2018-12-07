@@ -8,7 +8,9 @@ import widgets from 'cesium/Widgets/widgets.css';
 
 export default {
     data(){
-        name:'cesiumContainer'
+        return{
+            name:'cesiumContainer',
+        };
     },
     mounted() {
         //创建cesium Viewer 

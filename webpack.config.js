@@ -51,17 +51,15 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
-            // {
-            //     test: /\.(png|jpg|gif|svg)$/,
-            //     loader: 'file-loader',
-            //     options: {
-            //         name: '[name].[ext]?[hash]'
-            //     }
-            // },
             {
                 test: /\.(png|gif|jpg|jpeg|svg|xml|json)$/,
                 use: ['url-loader']
-            }
+            },
+            {
+              test: /\.(eot|svg|ttf|woff|woff2)$/,
+              loader: 'file-loader'
+            },
+
         ],
         unknownContextRegExp: /^.\/.*$/,
         unknownContextCritical: false,
