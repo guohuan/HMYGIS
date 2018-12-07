@@ -14,11 +14,11 @@
 
   /* 保证浏览器全屏幕显示，没有多余的白边 */
   html， body， #cesiumContainer {
-  width: 100%; 
-  height: 100%; 
-  margin: 0; 
-  padding: 0; 
-  overflow: hidden;
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
   }
 
   #app {

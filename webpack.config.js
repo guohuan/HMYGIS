@@ -11,7 +11,7 @@ const cesiumWorkers = '../Build/Cesium/Workers';
 
 module.exports = {
     context: __dirname,
-    entry: './src/index.js',
+    entry: './src/main.js',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -60,7 +60,7 @@ module.exports = {
             // },
             {
                 test: /\.(png|gif|jpg|jpeg|svg|xml|json)$/,
-                use: [ 'url-loader' ]
+                use: ['url-loader']
             }
         ],
         unknownContextRegExp: /^.\/.*$/,
@@ -71,7 +71,7 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
         host: 'localhost',
-        port: 9000,
+        port: 9900,
         hot: true,
         inline: true,
         open: true,
@@ -96,13 +96,17 @@ module.exports = {
         new VueLoaderPlugin(),
     ],
     resolve: {
-		alias: {
+        // 自动补全的扩展名
+        extensions: ['.js', '.vue', '.json'],
+        // 默认路径代理
+        // 例如 import Vue from 'vue'，会自动到 'vue/dist/vue.common.js'中寻找
+        alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, 'src'),
-			// Cesium module name
-			cesium: path.resolve(__dirname, cesiumSource)
-		}
-	},
+            // Cesium module name
+            cesium: path.resolve(__dirname, cesiumSource)
+        }
+    },
 
 
 };

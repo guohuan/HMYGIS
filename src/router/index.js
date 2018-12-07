@@ -1,14 +1,19 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import VueRouter from 'vue-router';
 import cesiumViewer from '@/components/cesiumViewer.vue';
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
-    routes: [{
+let routes = [
+    {
         path: '/',
         name: 'cesiumViewer',
         component: cesiumViewer
     }
-    ]
+];
+
+var route = new VueRouter({
+    routes
 })
+
+export default route;
