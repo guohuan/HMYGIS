@@ -4,6 +4,8 @@ import cesiumViewer from '@/components/cesiumViewer.vue';
 import login from '@/components/Login.vue';
 import home from '@/components/Home.vue';
 import chart from '@/components/charts.vue';
+import mcode from '@/components/MQRCode.vue';
+import User from '@/components/user.vue';
 
 Vue.use(VueRouter);
 
@@ -11,15 +13,15 @@ let routes = [
     {
         path: '/login',
         component: login,
-        name:'',
-        hidden:true,
+        name: '',
+        hidden: true,
     },
     {
         path: '/',
         name: '主页',
-        component: home,        
+        component: home,
         iconCls: 'el-icon-message',//图标样式class
-        children:[
+        children: [
             {
                 path: '/Map',
                 component: cesiumViewer,
@@ -34,7 +36,8 @@ let routes = [
         iconCls: 'fa fa-id-card-o',
         children: [
             { path: '/page4', component: login, name: '页面4' },
-            { path: '/page5', component: cesiumViewer, name: '页面5' }
+            { path: '/user', component: User, name: '用户信息' },
+            { path: '/mqrcode', component: mcode, name: '二维码' }
         ]
     },
     {

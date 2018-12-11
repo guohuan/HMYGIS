@@ -10,7 +10,7 @@
     name:'App'
   }
 </script>
-<style>
+<style lang="scss">
 
   /* 保证浏览器全屏幕显示，没有多余的白边 */
   html， body， #cesiumContainer {
@@ -29,5 +29,16 @@
     width: 100%;
     height: 100%;
   }
+  
+.toolbar {
+	background: #f2f2f2;
+	padding: 10px;
+	//border:1px solid #dfe6ec;
+	margin: 10px 0px;
+	.el-form-item {
+		margin-bottom: 10px;
+	}
+}
+
 
 </style>
