@@ -6,6 +6,7 @@ import home from '@/components/Home.vue';
 import chart from '@/components/charts.vue';
 import mcode from '@/components/MQRCode.vue';
 import User from '@/components/user.vue';
+import Hello from '@/components/helloPG.vue';
 
 Vue.use(VueRouter);
 
@@ -36,6 +37,7 @@ let routes = [
         iconCls: 'fa fa-id-card-o',
         children: [
             { path: '/page4', component: login, name: '页面4' },
+            { path: '/hellopg', component: Hello, name: '访问PG' },
             { path: '/user', component: User, name: '用户信息' },
             { path: '/mqrcode', component: mcode, name: '二维码' }
         ]

@@ -4,7 +4,7 @@
         <el-col :span="24" class="toolbar" style="padding-bottom:0px">
             <el-form :model="filters" :inline="true">
               <el-form-item>
-                  <el-input v-model="filters.aliseName" placeholder="姓名"></el-input>
+                  <el-input v-model="filters.aliseName" prefix-icon="el-icon-search" placeholder="姓名"></el-input>
               </el-form-item>
               <el-form-item>
                   <el-button type="primary" v-on:click="getUsers">查询</el-button>
